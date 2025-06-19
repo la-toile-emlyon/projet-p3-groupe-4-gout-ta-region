@@ -1,1 +1,15 @@
 /* Le code CSS spécifique à la page d'accueil */
+
+body{
+    background-color: #F5F5DC;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+#documentation{
+    background-color: #00AF66;
+    color: white;
+}
