@@ -16,6 +16,7 @@ nav{
     display: flex;
     flex-direction: row;
     margin: 0;
+    height: 10vh;
 }
 
 #documentation{
@@ -29,16 +30,26 @@ nav{
 
 header{
  display: flex;
- height: 100vh;
+ height: 90vh;
  margin: 0;
+ overflow: hidden;
 }
 
-
-
-header img{
+header #header{
   width: 50%;
   height: 100%;
   margin: 0;
+}
+
+header #background-green{
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  background-color:  #00AF66;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
 }
 
 img{
@@ -120,9 +131,8 @@ header h1{
 }
 
 header img{
-  background-color:  #00AF66;
-  object-fit: contain;
-  padding: 2vw;
+  width: 55%;
+  padding: 3vw;
 }
 
 
@@ -130,6 +140,10 @@ header img{
   font-size: 2.5em;
   margin: 0;
   padding: 2vw;
+}
+
+#vision{
+  margin: 0;
 }
 
 
