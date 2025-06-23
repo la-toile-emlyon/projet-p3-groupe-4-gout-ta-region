@@ -7,9 +7,25 @@ body{
 nav{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw
+}
+
+#kekro{
+    width: 10vw;
 }
 
 #documentation{
     background-color: #00AF66;
     color: white;
+    padding: 1vw;
+}
+
+nav a{
+    color: black;
+}
+
+header h1{
+    text-transform: uppercase;
 }
