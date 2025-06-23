@@ -71,27 +71,64 @@ nav ul{
   margin: 0;
 }
 
+#vision, #missions, #valeurs{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 33vh;
+  font-size: 4em;
+
+}
+
+.title{
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.title h2:nth-child(1){
+  margin: 0;
+  font-size: 3em;
+}
+
+.number{
+  margin: 0;
+  font-size: 5em;
+}
+
+/** Animation title description */
+.description {
+  display: none;
+  font-size: 1.2em;
+}
+
+#vision:hover .description, #missions:hover .description, #valeurs:hover .description   {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+#vision:hover .title, #missions:hover .title, #valeurs:hover .title {
+  display: none;
+}
+
+main{
+  margin: 0;
+}
+
 #vision{
-  background-color: rgb(21, 85, 13);
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
-  margin: 0;
+  background-color: #00AF66;
 }
-#mission{
-  
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
-    background-color: rgb(41, 110, 73);
-    margin: 0;
+#missions{
+    background-color:  #00af6684;
 }
+
 #valeurs{
-  background-color: rgb(225, 228, 48);
-  display: flex;
-  justify-content: space-between;
-  gap: 0px;
-  margin: 0;
+  background-color: #FFD100;
 }
 
 a{
