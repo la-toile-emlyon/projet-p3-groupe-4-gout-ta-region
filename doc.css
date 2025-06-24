@@ -1,27 +1,31 @@
 body {
   padding: 0;
   background-color: #F5F5DC;
-  font-family: Arial, sans-serif;
+  font-family: "IBM Plex Serif", serif; 
   color: #333;
+  margin: 0;
 }
-
+/* Navigation */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #F5F5DC;
   padding: 20px 40px;
+  height: 10vh;
+
 }
 
 nav img {
   height: 40px;
+  max-width: 100px;
 }
 
 nav ul {
-  display: flex;
   list-style: none;
   padding-left: 0;
   gap: 25px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -29,80 +33,127 @@ nav ul li a {
   color: #000;
   font-weight: bold;
 }
+#documentation {
+  background-color: #00AF66;
+  color: white;
+  border-radius: 10px;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
+}
 
+
+/* Section Contexte */
 #contexte {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  background-color: #ffffff;
+  background-color: #F5F5DC;
+
+}
+#contexte .texte {
+  width: 50%;
+  padding-right: 20px;
 }
 
-#contexte .description {
-  max-width: 600px;
-  font-size: 16px;
-  line-height: 1.5;
+#contexte .texte h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
 }
 
-#contexte img {
-  width: 300px;
-  max-width: 100%;
+#contexte .texte p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
+}
+
+#contexte .img {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00AF66;
+  padding: 20px;
+}
+
+#contexte .img img {
+  width: 90%;
   height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
 }
-
+#contexte .img img:last-child {
+    margin-bottom: 0;
+}
+/* Section Persona */
 #persona {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: #d0e8ff;
+  justify-content: flex-start;
+  background-color: #00AF66;
+  color: white;
 }
 
 #persona img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+
 }
 
 #persona div {
   max-width: 600px;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 #persona h2 {
-  font-size: 24px;
+  font-size: 2.2em;
   margin-bottom: 10px;
+  font-family: "IBM Plex Serif", serif;
+  color: #000;
 }
 
+#persona p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "IBM Plex Serif", serif; 
+}
+/* Sections Profil, Enjeux, Besoin */
 section:not(#contexte):not(#persona) {
   display: flex;
-  justify-content: space-between;
-  padding: 40px;
-  gap: 20px;
+  justify-content: center;
+  padding: 0px;
+  gap: 0px;
+    flex-wrap: wrap;
 }
 
 section:not(#contexte):not(#persona) div {
   flex: 1;
+  min-width: 33.33%;
   padding: 20px;
-  border-radius: 10px;
   color: #000;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 section:not(#contexte):not(#persona) div:nth-child(1) {
-  background-color: #fff9c4; 
+  background-color: #FFD100; 
 }
 
-section:not(#contexte):not(#persona) div:nth-child(2) {
-  background-color: #ffe0b2; 
-}
+
 
 section:not(#contexte):not(#persona) div:nth-child(3) {
-  background-color: #e1bee7; 
+  background-color: #00AF66; 
 }
 
 section:not(#contexte):not(#persona) h3 {
-  font-size: 20px;
+ font-size: 1.8em;
   margin-bottom: 10px;
+  font-family: "IBM Plex Serif", serif;
 }
 
 section:not(#contexte):not(#persona) p {
@@ -110,7 +161,197 @@ section:not(#contexte):not(#persona) p {
   line-height: 1.5;
 }
 
+.color-box {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  background-color: #FFD700;
+}
 
+.color-box.light {
+  background-color: #f4f0de;
+}
+
+.color-box.green-box {
+  background-color: #00b386;
+}
+
+.card-cyan {
+  background-color: #afece0;
+  color: black;
+}
+/* Section Nos évolutions */
+#evolution {
+  padding: 40px;
+  text-align: center;
+  background-color: #F5F5DC;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5DC;
+}
+
+#evolution h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
+}
+
+#maquettes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+#maquettes img {
+  width: 30%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Section Fonctionnalités à venir */
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1;
+  min-width: 33.33%; 
+  padding: 20px;
+  color: #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature.yellow {
+  background-color: #FFD100;
+}
+
+.feature.green {
+  background-color: #00AF66;
+}
+
+.color-box {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  background-color: #FFD700;
+}
+
+.color-box.light {
+  background-color: rgba(0, 175, 102, 0.50);
+}
+
+.color-box.green-box {
+  background-color: #00AF66;
+}
+
+.feature h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.feature p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Section L'équipe projet */
+.team {
+display: flex;
+flex-direction: column;
+  text-align: center;
+  background-color: #F5F5DC;
+}
+
+.team h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.team-grid-square {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.member-card {
+  width: 25%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #F5F5DC;
+}
+
+.member-card p {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.member-card .title {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.member-card.card-yellow {
+  background-color: #FFD100;
+  color: #000;
+}
+
+.member-card.card-green {
+  background-color: #00AF66;
+  color: white;
+}
+
+.member-card.light-green {
+  background-color: rgba(0, 175, 102, 0.50);
+    color: black;
+}
+
+
+.member-card.card-orange {
+  background-color: #F5F5DC;
+  color: white;
+}
+
+
+/* Pied de page */
 footer {
   background-color: #e8faeb;
   text-align: center;
@@ -150,6 +391,42 @@ footer {
   width: 100%;
   font-family: "IBM Plex Serif", serif;
 }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.social-icons {
+  padding: 10px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #00AF66;
+  font-size: 1.5em;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+  font-family: "IBM Plex Serif", serif;
+}
+
+
+
+
+
+
 
 .header h1 {
   font-size: 16px;

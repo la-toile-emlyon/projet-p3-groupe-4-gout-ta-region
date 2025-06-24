@@ -39,6 +39,10 @@ header #header{
   width: 50%;
   height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
 }
 
 header #background-green{
@@ -49,7 +53,20 @@ header #background-green{
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
 
+header h1 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Serif", serif; /
+}
+#accroche {
+  font-size: 1.5em;
+  margin: 0;
+  line-height: 1.5;
+  font-family: "IBM Plex Serif", serif; /
 }
 
 img{
@@ -71,13 +88,34 @@ nav ul{
   margin: 0;
 }
 
-#vision, #missions, #valeurs{
+header img {
+  width: 80%;
+  max-width: 400px;
+  object-fit: contain;
+  padding: 3vw;
+}
+
+
+/* Sections Vision, Missions, Valeurs */
+#vision, #missions, #valeurs {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   height: 33vh;
   font-size: 4em;
-
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#vision.light-green {
+  background-color: rgba(0, 175, 102, 0.50);
+}
+#missions.green {
+  background-color: #00AF66;
+}
+#valeurs.yellow {
+  background-color: #FFD100;
 }
 
 .title{
@@ -86,6 +124,7 @@ nav ul{
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+    padding: 0 2.5vw;
 }
 
 .title h2:nth-child(1){
@@ -95,13 +134,17 @@ nav ul{
 
 .number{
   margin: 0;
-  font-size: 5em;
+  font-size: 15vw;
 }
+
 
 /** Animation title description */
 .description {
   display: none;
-  font-size: 1.2em;
+  font-size: 0.3em;
+  text-align: center;
+  padding: 0 5vw;
+  font-family: "IBM Plex Serif", serif; /
 }
 
 #vision:hover .description, #missions:hover .description, #valeurs:hover .description   {
@@ -119,25 +162,116 @@ nav ul{
 main{
   margin: 0;
 }
+/* Section Statistiques */
 
-#vision{
+#stats{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#stats div{
+  width: calc(100vw/3);
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+    text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#stats div span.percentage {
+    font-size: 1em; 
+    font-weight: bold;
+
+}
+
+#stats div span.message {
+    font-size: 0.25em; 
+    line-height: 1.2;
+    margin-top: 5px;
+
+}
+
+.green{
   background-color: #00AF66;
 }
-#missions{
-    background-color:  #00af6684;
+
+.light-green{
+  background-color: rgba(0, 175, 102, 0.50);
+}
+.yellow{
+  background-color: #FFD100;
+}
+.beige{
+  background-color: #F5F5DC;
+}
+/* Section Fonctionnalités */
+#fonctionnalites{
+  display: flex;
+  flex-direction: column;
 }
 
-#valeurs{
-  background-color: #FFD100;
+.fonctionalite{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 40vw;
+}
+
+.fonctionalite img{
+  width: 50vw;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fonctionalite h3{
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: 400;
+    text-align: center;
+  padding: 0 2vw;
+}
+/* Section Témoignages */
+#temoignages{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding: 2vw 0;
+}
+
+.temoignage-card{
+  width: calc(100vw/3);
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+}
+
+.temoignage-card h4{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.temoignage-card p{
+  font-size: 1.2em;
+  line-height: 1.4;
 }
 
 a{
   text-decoration: none;
 }
 
-body{
-  background-color: #F5F5DC;
-}
 
 nav{
   display: flex;
@@ -174,16 +308,16 @@ header img{
 
 
 #accroche{
-  font-size: 2.5em;
+  font-size: 1.8em;
   margin: 0;
-  padding: 2vw;
+  padding: 1vw;
 }
 
 #vision{
   margin: 0;
 }
 
-
+/* Pied de page */
 
 footer {
   background-color: #e8faeb;
@@ -206,7 +340,8 @@ footer {
 }
 
 .newsletter-input {
-  background-color: #fef7e0;us: 25px;
+  background-color: #fef7e0;
+  border-radius: 25px;
   padding: 5px 10px;
   width: 280px;
   margin: 0 auto;
@@ -226,10 +361,30 @@ footer {
 
 .footer-links{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.footer-links a {
   text-decoration: none;
   color: #000;
+
 }
 
+.social-icons {
+  padding: 10px 0;
+}
 
+.social-icons a {
+  margin: 0 10px;
+  color: #00AF66;
+  font-size: 1.5em;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+  font-family: "IBM Plex Serif", serif;
+}
 
