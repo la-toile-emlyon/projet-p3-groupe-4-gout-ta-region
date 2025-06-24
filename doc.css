@@ -1,32 +1,188 @@
-/* Le code CSS spécifique à la page de documentation */
- /*
-   <footer>
-    <div class="newsletter">
-      <label for="email">Newsletter</label>
-      <div class="newsletter-input">
-        <input type="email" id="email" placeholder="Your email" />
-        <button><i class="fas fa-paper-plane"></i></button>
-      </div>
-    </div>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+}
 
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">Experience</a>
-      <a href="#">News</a>
-      <a href="#">About us</a>
-      <a href="#">Jobs</a>
-      <a href="#">Contact</a>
-    </div>
+/* NAV HEADER */
+nav {
+  background-color: #ecfdf5;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
+nav img {
+  height: 45px;
+}
 
-    <p class="copyright">© Copyright 2019 - Lift Media</p>
-  </footer>
--->
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: bold;
+}
+
+#documentation {
+  background-color: #22c55e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- CONTEXTE --- */
+#contexte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+#contexte .texte {
+  flex: 1;
+  min-width: 300px;
+}
+
+#contexte .texte h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+#contexte .texte p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#contexte img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* --- PERSONA --- */
+#persona {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  background-color: #fef9c3;
+}
+
+#persona img {
+  width: 300px;
+  border-radius: 10px;
+  background-color: #ccc;
+  height: auto;
+}
+
+#persona div {
+  flex: 1;
+  min-width: 280px;
+}
+
+#persona h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#persona p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- PROFIL / ENJEUX / BESOIN --- */
+section:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+}
+
+section:nth-of-type(3) div {
+  flex: 1;
+  min-width: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section:nth-of-type(3) div:nth-child(1) {
+  background-color: #0f766e;
+}
+section:nth-of-type(3) div:nth-child(2) {
+  background-color: #1e3a8a;
+}
+section:nth-of-type(3) div:nth-child(3) {
+  background-color: #ca8a04;
+}
+
+section:nth-of-type(3) h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section:nth-of-type(3) p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f7f4e3;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header p {
+  font-size: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.images img {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+
+
 
 footer {
   background-color: #e8faeb;
@@ -67,4 +223,6 @@ footer {
   width: 100%;
   font-family: "IBM Plex Serif", serif;
 }
+
+
   
