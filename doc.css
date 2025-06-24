@@ -1,96 +1,72 @@
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8;
-  color: #222;
+  padding: 0;
+  background-color: #F5F5DC;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-/* NAV HEADER */
 nav {
-  background-color: #ecfdf5;
-  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  padding: 20px 40px;
 }
 
 nav img {
-  height: 45px;
+  height: 40px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
+  padding-left: 0;
   gap: 25px;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #111;
+  color: #000;
   font-weight: bold;
 }
 
-#documentation {
-  background-color: #22c55e;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* --- CONTEXTE --- */
 #contexte {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-  background-color: #fff;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
 }
 
-#contexte .texte {
-  flex: 1;
-  min-width: 300px;
-}
-
-#contexte .texte h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-#contexte .texte p {
-  font-size: 18px;
-  line-height: 1.6;
+#contexte .description {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 #contexte img {
   width: 300px;
-  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
-/* --- PERSONA --- */
 #persona {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-  background-color: #fef9c3;
+  padding: 40px;
+  background-color: #d0e8ff;
 }
 
 #persona img {
-  width: 300px;
-  border-radius: 10px;
-  background-color: #ccc;
+  width: 200px;
   height: auto;
+  border-radius: 10px;
 }
 
 #persona div {
-  flex: 1;
-  min-width: 280px;
+  max-width: 600px;
+  padding-left: 30px;
 }
 
 #persona h2 {
@@ -98,90 +74,41 @@ nav ul li a {
   margin-bottom: 10px;
 }
 
-#persona p {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-/* --- PROFIL / ENJEUX / BESOIN --- */
-section:nth-of-type(3) {
+section:not(#contexte):not(#persona) {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px;
   gap: 20px;
-  padding: 60px 40px;
-  flex-wrap: wrap;
 }
 
-section:nth-of-type(3) div {
+section:not(#contexte):not(#persona) div {
   flex: 1;
-  min-width: 250px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section:nth-of-type(3) div:nth-child(1) {
-  background-color: #0f766e;
-}
-section:nth-of-type(3) div:nth-child(2) {
-  background-color: #1e3a8a;
-}
-section:nth-of-type(3) div:nth-child(3) {
-  background-color: #ca8a04;
-}
-
-section:nth-of-type(3) h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-section:nth-of-type(3) p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-body {
-  font-family: 'Georgia', serif;
-  background-color: #f7f4e3;
-  margin: 0;
-  padding: 0;
   color: #000;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+section:not(#contexte):not(#persona) div:nth-child(1) {
+  background-color: #fff9c4; 
 }
 
-.header p {
-  font-size: 10px;
-  text-align: center;
-  margin: 0;
+section:not(#contexte):not(#persona) div:nth-child(2) {
+  background-color: #ffe0b2; 
 }
 
-.header h1 {
-  font-size: 16px;
-  text-align: center;
-  margin: 10px 0;
+section:not(#contexte):not(#persona) div:nth-child(3) {
+  background-color: #e1bee7; 
 }
 
-.images {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+section:not(#contexte):not(#persona) h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-.images img {
-  width: 30%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+section:not(#contexte):not(#persona) p {
+  font-size: 14px;
+  line-height: 1.5;
 }
-
-
-
 
 
 footer {
@@ -224,5 +151,21 @@ footer {
   font-family: "IBM Plex Serif", serif;
 }
 
+.header h1 {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+}
 
+.images {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.images img {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
   
