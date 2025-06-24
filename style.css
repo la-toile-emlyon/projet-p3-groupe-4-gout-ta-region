@@ -185,3 +185,52 @@ header img{
 
 
 
+footer {
+  background-color: #e8faeb;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.newsletter {
+  background-color: #cbf0dd;
+  padding: 25px 15px;
+}
+
+.newsletter label {
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.newsletter-input {
+  background-color: #fef7e0;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-input input {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+}
+
+
+
