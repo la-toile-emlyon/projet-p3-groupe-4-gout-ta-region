@@ -111,7 +111,7 @@ header img {
   align-items: center;
   margin: 0;
   height: 33vh;
-  font-size: 4em; /* Taille de base pour l'échelle */
+  font-size: 6em; /* Taille de base pour l'échelle */
   overflow: hidden;
   cursor: pointer;
   perspective: 1000px; /* Pour l'effet 3D */
@@ -150,18 +150,18 @@ header img {
 .description {
   transform: rotateY(180deg); /* Commence "retourné" */
   opacity: 0;
-  color: white; /* Texte en blanc pour les descriptions */
-  font-size: 0.8em; /* Message plus gros et lisible */
+  font-size: 0.5em; /* Message plus gros et lisible */
   flex-direction: column; /* Texte de description en colonne pour meilleure lisibilité */
   justify-content: center;
   align-items: center;
+  text-align: center;
   line-height: 1.4;
 }
 
 #valeurs .description {
     flex-direction: row; /* Pour "Vrai Local Respect" côte à côte */
     gap: 20px;
-    font-size: 0.7em; /* Taille légèrement plus grande pour ces 3 mots */
+    font-size: 0.4em; /* Taille légèrement plus grande pour ces 3 mots */
 }
 
 .title h2:nth-child(1) {
@@ -230,22 +230,42 @@ main {
 #fonctionnalites {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+
+#fonctionnalites h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
 }
 
 .fonctionalite {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
   flex-direction: row;
   width: 100vw;
   height: 40vw;
 }
 
-.fonctionalite.reversed-order {
-  flex-direction: row-reverse;
+.fonctionalite img {
+  background-color: #00AF66;
+  width: 60vw;
+  max-width: 50vw;
+  height: 80%;
+  object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
 }
 
-.fonctionalite img {
-  width: 50vw;
-  max-width: 350px; /* Taille maximale pour rester "fin" */
+.fonctionalite .img-fonc {
+  background-color: #00AF66;
+  width: 60vw;
+  max-width: 50vw;
   height: 100%;
   object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
   display: flex;
@@ -271,8 +291,20 @@ main {
 #temoignages {
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 2vw 0;
+}
+.all-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+#temoignages h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
 }
 
 .temoignage-card {
