@@ -98,7 +98,7 @@ header h1 {
 
 header img {
   width: 80%;
-  max-width: 400px; /* Taille plus fine */
+  max-width: 500px; /* Taille plus fine */
   height: auto; /* Garder auto pour l'aspect ratio */
   object-fit: contain;
   padding: 3vw;
