@@ -43,14 +43,32 @@ nav a {
   font-family: "IBM Plex Serif", serif;
 }
 
+nav .buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
 #documentation {
   background-color: #00AF66;
   color: white;
-  border-radius: 10px;
+  border-radius: 32px;
   padding: 1vw 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+}
+
+#telechargement {
+  background-color: #FFD100;
+  color: black;
+  border-radius: 32px;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
 }
 
 /* En-tête */
@@ -231,6 +249,7 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 40px 0;
 }
 
 
@@ -252,8 +271,7 @@ main {
 
 .fonctionalite img {
   background-color: #00AF66;
-  width: 60vw;
-  max-width: 50vw;
+  width: 100%;
   height: 80%;
   object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
   display: flex;
@@ -264,8 +282,7 @@ main {
 
 .fonctionalite .img-fonc {
   background-color: #00AF66;
-  width: 60vw;
-  max-width: 50vw;
+  width: 50%;
   height: 100%;
   object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
   display: flex;
@@ -274,17 +291,30 @@ main {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
 }
 
+.fonctionalite .txt-fonc {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .fonctionalite h3 {
-  width: 50vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
   font-weight: 400;
   text-align: center;
-  padding: 0 2vw;
   font-family: "IBM Plex Serif", serif;
   transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
+  margin: 0;
+}
+
+.fonctionalite h4 {
+  font-weight: 400;
 }
 
 /* Section Témoignages */
@@ -333,6 +363,7 @@ main {
   font-size: 1.5em; /* Taille ajustée */
   margin-bottom: 5px;
   font-family: "IBM Plex Serif", serif;
+  
 }
 .temoignage-card p {
   font-size: 0.9em; /* Taille ajustée */
