@@ -1,4 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Styles généraux pour toutes les pages ou styles de base */
 html {
   height: 100%;
   width: 100%;
+  margin: 0;
+  font-family: "IBM Plex Serif", serif;
+}
+
+body {
+  background-color: #F5F5DC;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  height: 10vh;
+}
+
+#kekro {
+  width: 10vw;
+  max-width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 1vw;
+  font-family: "IBM Plex Serif", serif;
+}
+
+nav .buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+#documentation {
+  background-color: #00AF66;
+  color: white;
+  border-radius: 32px;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+#telechargement {
+  background-color: #FFD100;
+  color: black;
+  border-radius: 32px;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  height: 90vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+header #header {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+header #background-green {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  background-color:  #00AF66;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centré verticalement */
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 2.5em; /* Taille ajustée */
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Serif", serif;
+}
+
+#accroche {
+  font-size: 1.5em; /* Taille ajustée */
+  margin: 0;
+  line-height: 1.5;
+  font-family: "IBM Plex Serif", serif;
+}
+
+header img {
+  width: 80%;
+  max-width: 500px; /* Taille plus fine */
+  height: auto; /* Garder auto pour l'aspect ratio */
+  object-fit: contain;
+  padding: 3vw;
+}
+
+/* Sections Vision, Missions, Valeurs */
+#vision, #missions, #valeurs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 33vh;
+  font-size: 6em; /* Taille de base pour l'échelle */
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 1000px; /* Pour l'effet 3D */
+  position: relative; /* Nécessaire pour les enfants positionnés absolument */
+}
+
+#vision.light-green {
+  background-color: rgba(0, 175, 102, 0.50);
+}
+#missions.green {
+  background-color: #00AF66;
+}
+#valeurs.yellow {
+  background-color: #FFD100;
+}
+
+.title, .description {
+  position: absolute; /* Positionnement absolu pour le flip */
+  width: 100%; /* S'assurer qu'il prend toute la largeur du parent */
+  height: 100%; /* S'assurer qu'il prend toute la hauteur */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  backface-visibility: hidden; /* Cache la face arrière pendant le flip */
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  padding: 0 2.5vw;
+  box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+.title {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.description {
+  transform: rotateY(180deg); /* Commence "retourné" */
+  opacity: 0;
+  font-size: 0.5em; /* Message plus gros et lisible */
+  flex-direction: column; /* Texte de description en colonne pour meilleure lisibilité */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#valeurs .description {
+    flex-direction: row; /* Pour "Vrai Local Respect" côte à côte */
+    gap: 20px;
+    font-size: 0.4em; /* Taille légèrement plus grande pour ces 3 mots */
+}
+
+.title h2:nth-child(1) {
+  margin: 0;
+  font-size: 1em; /* Relatif à la taille du parent */
+}
+
+.number {
+  margin: 0;
+  font-size: 0.5em; /* Relatif à la taille du parent, grand comme sur la maquette */
+}
+
+main {
+  margin: 0;
+}
+
+/* Section Statistiques */
+#stats {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#stats div {
+  width: calc(100vw / 3);
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em; /* Taille de base pour le % */
+  color: black; /* Couleur noire demandée */
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#stats div span.percentage {
+    font-size: 1em; /* Reste 1em par rapport au 4em du parent */
+    font-weight: bold;
+    font-family: "IBM Plex Serif", serif;
+}
+
+#stats div span.message {
+    font-size: 0.25em; /* Message plus petit */
+    line-height: 1.2;
+    margin-top: 5px;
+    font-family: "IBM Plex Serif", serif;
+}
+
+.green {
+  background-color: #00AF66;
+}
+
+.light-green {
+  background-color: rgba(0, 175, 102, 0.50);
+}
+.yellow {
+  background-color: #FFD100;
+}
+.beige {
+  background-color: #F5F5DC;
+}
+
+/* Section Fonctionnalités */
+#fonctionnalites {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0;
+}
+
+
+#fonctionnalites h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
+}
+
+.fonctionalite {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 40vw;
+}
+
+.fonctionalite img {
+  background-color: #00AF66;
+  width: 100%;
+  height: 80%;
+  object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
+}
+
+.fonctionalite .img-fonc {
+  background-color: #00AF66;
+  width: 50%;
+  height: 100%;
+  object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
+}
+
+.fonctionalite .txt-fonc {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fonctionalite h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
+  margin: 0;
+}
+
+.fonctionalite h4 {
+  font-weight: 400;
+}
+
+/* Section Témoignages */
+#temoignages {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2vw 0;
+}
+.all-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+#temoignages h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif; /* Typographie gardée */
+}
+
+.temoignage-card {
+  width: calc(100vw / 3);
+  height: 20vw; /* Cases plus petites */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1vw; /* Padding ajusté */
+  box-sizing: border-box; /* Inclure padding dans la largeur */
+}
+
+.temoignage-card img {
+    width: 10vw; /* Plus petite image */
+    height: 10vw;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.temoignage-card h4 {
+  font-size: 1.5em; /* Taille ajustée */
+  margin-bottom: 5px;
+  font-family: "IBM Plex Serif", serif;
+  
+}
+.temoignage-card p {
+  font-size: 0.9em; /* Taille ajustée */
+  line-height: 1.4;
+  font-family: "IBM Plex Serif", serif;
+}
+
+/* Pied de page */
+footer {
+  background-color: #e8faeb;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.newsletter {
+  background-color: #cbf0dd;
+  padding: 25px 15px;
+}
+
+.newsletter label {
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.newsletter-input {
+  background-color: #fef7e0;
+  border-radius: 25px;
+  padding: 5px 10px;
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-input input {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.social-icons {
+  padding: 10px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #00AF66;
+  font-size: 1.5em;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+  font-family: "IBM Plex Serif", serif;
 }

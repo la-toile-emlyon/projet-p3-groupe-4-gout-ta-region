@@ -1,16 +1,174 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Projet - Page d'accueil</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <script src="script.js" type="text/javascript"></script>
-  </head>
 
-  <body>
-    Accueil
-    <a href="/doc.html">Documentation</a>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Projet - Page d'accueil</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="index-page">
+  <nav>
+      <img id="kekro" src="assets/kekro.svg" alt="Logo Kékro">
+      <ul>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#missions">Missions</a></li>
+        <li><a href="#valeurs">Valeurs</a></li>
+        <li><a href="#fonctionnalités">Fonctionnalités</a></li>
+      </ul>
+      <div class="buttons">
+        <a id="documentation" href="doc.html">Documentation</a>
+        <a id="telechargement" href="https://www.figma.com/proto/FTcbG32MVtz3j9Oi8fQsk5/FR-%F0%9F%93%9D-P3---Projet-de-groupe---Template--Community-?page-id=1%3A3&node-id=4934-15630&starting-point-node-id=4934%3A15630&show-proto-sidebar=1&t=VDNqltrQqxzMIbaZ-1">Télécharger</a>
+      </div>
+      
+  </nav>
+
+  <header>
+    <div id="header">
+      <h1>Le Goût Vrai, L'Impact Local.</h1>
+      <p id="accroche">Marre du sans saveur ? Envie de soutenir ce qui compte ?
+      <br/>
+      <br/>
+      <br/>
+        Avec <strong>KEKRO</strong>,Croque le local, savoure l'authentique, soutiens nos producteurs. Chaque bouchée fait la différence.
+      </p>
+    </div>
+    <div id="background-green">
+      <img src="assets/photo_acceuil.png" alt="Écran d'accueil application Kékro">
+    </div>
+  </header>
+
+<main>
+  <section id="vision" class="light-green">
+    <div class="title">
+      <h2>Vision</h2>
+      <h2 class="number">1</h2>
+    </div>
+    <p class="description">Ramener la Terre dans nos vies, à chaque assiette.</p>
+    </section>
+  <section id="missions" class="green">
+    <div class="title">
+    <h2>Missions</h2>
+    <h2 class="number">2</h2>
+  </div>
+  <p class="description">Faire vibrer le local, pour une consommation engagée et stylée.</p>
+  </section>
+  <section id="valeurs" class="yellow">
+    <div class="title">
+    <h2>Valeurs</h2>
+    <h2 class="number">3</h2>
+  </div>
+  <div class="description">
+    <p> <strong>Vrai</strong> : Des produits authentiques, sans artifice.</p>
+    <p> <strong>Local</strong> : Des circuits courts, pour une économie juste.</p>
+    <p> <strong>Respect </strong>: De la terre, des producteurs, de ta santé.</p>
+  </div>
+  </section>
+  <section id="stats">
+    <div class="green">
+      <span class="percentage">43%</span>
+      <span class="message">des personnes ne savent pas différencier les légumes et ne connaissent pas les légumes "martiens". Kékro te les fait découvrir !</span>
+    </div>
+    <div class="light-green">
+      <span class="percentage">22%</span>
+      <span class="message">seulement des jeunes commandent régulièrement des produits sains. Kékro rend le sain accessible et stylé.</span>
+    </div>
+    <div class="yellow">
+      <span class="percentage">90%</span>
+      <span class="message">des jeunes de 15 à 35 ans commandent régulièrement des fast-foods. Kékro est l'alternative locale et gourmande.</span>
+    </div>
+  </section>
+
+  <section id="fonctionnalites">
+    <h2>Nos fonctionnalités principales</h2>
+    <div class="fonctionalite normal-order">
+      <div class="txt-fonc">
+      <h3 >Une marketplace locale</h3>
+      <h4 >plate forme d’achat en circuit court </h4>
+      </div>
+
+      <div class="img-fonc">
+        <img src="assets/fonc_marketplace.png" alt="maquette fonctionnalité marketplace">
+      </div>
+      
+    </div>
+      <div class="fonctionalite reversed-order">
+        <div class="img-fonc">
+        <img src="assets/fonc_actu.png"  alt="maquette fonctionnalité fil d'actualité">  
+        </div>
+        <div class="txt-fonc">
+          <h3>Fil d’actualité</h3>
+          <h4>S'informer sur les saisons et suivre le quotidient des producteurs </h4>
+      </div>
+       
+      </div>
+        <div class="fonctionalite normal-order">
+       <div class="txt-fonc">
+        <h3>Carte interactive</h3>
+        <h4>Trouver facilement les producteurs les plus proches</h4>
+      </div>
+       
+          <div class="img-fonc">
+           <img src="assets/fonc_carte.png" alt="maquette fonctionnalité points de fidélité">           
+          </div>
+
+        </div>
+  </section>
+  <section id="parcours">
+  </section>
+  <section id="temoignages">
+
+    <h2>Nos témoignages</h2>
+
+    <div class="all-cards">
+       <div class="temoignage-card yellow">
+      <img src="assets\tem1.png" alt="Image de la personne 1">
+      <h4>Sarah L.</h4>
+      <p>"J’ai troqué Uber Eats contre Kékro. Et franchement, j’me régale bien plus"</p>
+    </div>
+    <div class="temoignage-card beige">
+      <img src="assets\tem2.png" alt="Image de la personne 2">
+      <h4>Yanis M.</h4>
+      <p>"Je redécouvre le goût des vrais produits. Et en plus, je soutiens les producteurs de chez moi."</p>
+    </div>
+    <div class="temoignage-card green">
+      <img src="assets\tem3.png" alt="Image de la personne 3">
+      <h4>Reda D.</h4>
+      <p>"Enfin une app qui me donne envie de manger local. Simple, rapide et canon visuellement !"</p>
+    </div>
+    </div>
+   
+  </section>
+</main>
+ <footer>
+    <div class="newsletter">
+      <label for="email">Newsletter</label>
+      <div class="newsletter-input">
+        <input type="email" id="email" placeholder="Votre email" />
+        <button><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Accueil</a>
+      <a href="#">Expérience</a>
+      <a href="#">Actualités</a>
+      <a href="#">À propos de nous</a>
+      <a href="#">Emplois</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <p class="copyright">© Copyright 2025 - KEKRO</p>
+  </footer>
+ <script src="script.js" type="text/javascript"></script>
+</body>
+
 </html>
