@@ -6,6 +6,7 @@
     <title>Projet - Documentation</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="doc.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
 
   <body class="doc-page">
@@ -33,20 +34,19 @@
       </p>
     </div>
     <div class="img">
-    <img src="assets\Group 3595.png" alt="lutte contre la faim">
-    <img src="assets\Group 3596.png" alt="lutte contre la faim">
+    <img src="assets/Group 3595.png" alt="Illustration de la lutte contre la faim">
+    <img src="assets/Group 3596.png" alt="Illustration des revenus producteurs">
     </div>
   </section>
   <section id="persona">
-    <img src=assets\persona.jpg alt="Léa - étudiante en art">
+    <img src="assets/persona.jpg" alt="Léa - étudiante en art">
     <div>
           <h2>Notre Persona : Léa, 22 ans, étudiante en art à Paris.</h2>
       <p></p>
     </div>
   </section>
 
-  <section>
-    <div>
+  <section class="persona-details"> <div>
       <h3>Profil de Léa :</h3>
       <ul>
         <li>Hyper connectée, suiveuse de tendances.</li>
@@ -78,10 +78,19 @@
   <section id="evolution">
     <h2>Nos évolutions</h2>
     <div id="maquettes">
-    <img src="assets\evo_app_1.png" alt="Wireframe Kékro">
-    <img src="assets\evo_app_2.png" alt="Mid-fidelity Kékro"> 
-    <img src="assets\acceuil_app.png" alt="High-fidelity Kékro">
-  </div>
+        <div>
+            <img src="assets/evo_app_1.png" alt="Wireframe Kékro">
+            <p>Étape 1 : Nos premiers dessins et wireframes</p>
+        </div>
+        <div>
+            <img src="assets/evo_app_2.png" alt="Mid-fidelity Kékro">
+            <p>Étape 2 : Le maquettage et l'architecture UI/UX</p>
+        </div>
+        <div>
+            <img src="assets/acceuil_app.png" alt="High-fidelity Kékro">
+            <p>Étape 3 : La réalisation de l'application finale</p>
+        </div>
+    </div>
   </section>
 <section id="a-venir" class="features">
       <h2>Fonctionnalités à venir</h2>
@@ -106,22 +115,23 @@
 
   <section id="equipe" class="team">
       <h2>L'équipe projet</h2>
-      <div class="team-grid-square">
-        <div class="member-card card-yellow">
-          <img src="assets\Salim.jpeg" alt="Salim BAHACHE">
-          <p>Salim BAHACHE<br><span class="title">UI/UX Designer</span></p>
-        </div>
-        <div class="member-card card-green">
-          <img src="assets\bernis.jpg" alt="Bernis KOUZOU">
-          <p>Bernis KOUZOU<br><span class="title">Developpeur FullStack</span></p>
-        </div>
-        <div class="member-card light-green">
-          <img src="assets\Ismail.jpeg" alt="Ismail DOURI">
-          <p>Ismail DOURI<br><span class="title">Chef de Projet</span></p>
-        </div>
-        <div class="member-card card-orange">
-          <img src="assets\Greg.jpg" alt="Gregory NSIMBA">
-          <p>Gregory NSIMBA<br><span class="title">Spécialiste Marketing</span></p>
+      <div class="team-grid-container"> <div class="team-grid-square">
+            <div class="member-card card-yellow">
+              <img src="assets/Salim.jpeg" alt="Salim BAHACHE">
+              <p>Salim BAHACHE<br><span class="title">UI/UX Designer</span></p>
+            </div>
+            <div class="member-card card-green">
+              <img src="assets/bernis.jpg" alt="Bernis KOUZOU">
+              <p>Bernis KOUZOU<br><span class="title">Developpeur FullStack</span></p>
+            </div>
+            <div class="member-card light-green">
+              <img src="assets/Ismail.jpeg" alt="Ismail DOURI">
+              <p>Ismail DOURI<br><span class="title">Chef de Projet</span></p>
+            </div>
+            <div class="member-card beige-bg">
+              <img src="assets/Greg.jpg" alt="Gregory NSIMBA">
+              <p>Gregory NSIMBA<br><span class="title">Spécialiste Marketing</span></p>
+            </div>
         </div>
       </div>
   </section>

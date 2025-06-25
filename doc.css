@@ -52,6 +52,7 @@ nav ul li a {
   justify-content: space-between;
   align-items: center;
   background-color: #F5F5DC;
+  padding: 40px; /* Ajout d'un padding global pour la section */
 
 }
 #contexte .texte {
@@ -96,25 +97,27 @@ nav ul li a {
   justify-content: flex-start;
   background-color: #00AF66;
   color: white;
+  padding: 40px; /* Ajout d'un padding pour la section entière */
 }
 
 #persona img {
-  width: 500px;
-  height: 500px;
+  width: 200px; /* Taille ajustée pour coller à la maquette */
+  height: 200px; /* Garder carré */
   object-fit: cover;
-
+  border-radius: 10px;
+  margin-right: 30px;
 }
 
 #persona div {
   max-width: 600px;
-  padding-left: 10px;
+  padding-left: 0px; /* Pas de padding à gauche */
 }
 
 #persona h2 {
   font-size: 2.2em;
   margin-bottom: 10px;
   font-family: "IBM Plex Serif", serif;
-  color: #000;
+  color: white; /* Couleur du texte pour la persona sur fond vert */
 }
 
 #persona p {
@@ -123,57 +126,35 @@ nav ul li a {
   font-family: "IBM Plex Serif", serif; 
 }
 /* Sections Profil, Enjeux, Besoin */
-section:not(#contexte):not(#persona) {
+.persona-details { /* Utilisation d'une classe spécifique pour cette section */
   display: flex;
   justify-content: center;
-  padding: 0px;
-  gap: 0px;
-    flex-wrap: wrap;
+  padding: 0; /* Pas de padding pour coller les cartes */
+  gap: 0; /* Pas d'espace entre les cartes */
+  flex-wrap: wrap;
 }
 
-section:not(#contexte):not(#persona) div {
+.persona-details div {
   flex: 1;
   min-width: 33.33%;
   padding: 20px;
   color: #000;
   box-sizing: border-box;
   margin: 0;
+  border-radius: 0; /* Pas d'arrondi */
 }
 
-section:not(#contexte):not(#persona) div:nth-child(1) {
+.persona-details div:nth-child(1) {
   background-color: #FFD100; 
 }
 
+.persona-details div:nth-child(2) { /* Enjeux */
+  background-color: rgba(0, 175, 102, 0.50); /* Vert clair */
+}
 
-
-section:not(#contexte):not(#persona) div:nth-child(3) {
+.persona-details div:nth-child(3) { /* Besoin */
   background-color: #00AF66; 
-}
-
-section:not(#contexte):not(#persona) h3 {
- font-size: 1.8em;
-  margin-bottom: 10px;
-  font-family: "IBM Plex Serif", serif;
-}
-
-section:not(#contexte):not(#persona) p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.color-box {
-  width: 60px;
-  height: 60px;
-  margin: 10px auto;
-  background-color: #FFD700;
-}
-
-.color-box.light {
-  background-color: #f4f0de;
-}
-
-.color-box.green-box {
-  background-color: #00b386;
+  color: white; /* Texte blanc sur fond vert */
 }
 
 .persona-details h3 {
@@ -201,7 +182,6 @@ section:not(#contexte):not(#persona) p {
   background-color: #F5F5DC;
   display: flex;
   flex-direction: column;
-  background-color: #F5F5DC;
 }
 
 #evolution h2 {
@@ -213,9 +193,9 @@ section:not(#contexte):not(#persona) p {
 #maquettes {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 40px; /* Espacement ajusté */
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 40px; /* Ajout d'un padding pour la section elle-même */
 }
 
 #maquettes > div { /* Cibler les conteneurs individuels pour les images et paragraphes */
@@ -226,9 +206,9 @@ section:not(#contexte):not(#persona) p {
     max-width: 250px; /* Taille max comme sur maquette */
     text-align: center;
 }
+
 #maquettes img {
-  width: 30%;
-  max-width: 250px;
+  width: 100%; /* Prend toute la largeur de son div parent */
   height: auto;
   object-fit: contain;
   border: 1px solid #ccc;
@@ -247,19 +227,15 @@ section:not(#contexte):not(#persona) p {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 0; /* Pas de padding pour coller les cartes */
 }
 
 .features h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-
+  font-family: "IBM Plex Serif", serif;
 }
 
-.feature-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 .feature-grid {
   display: flex;
   justify-content: center;
@@ -276,6 +252,7 @@ section:not(#contexte):not(#persona) p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0; /* Pas d'arrondi */
 }
 
 .feature.yellow {
@@ -284,6 +261,7 @@ section:not(#contexte):not(#persona) p {
 
 .feature.green {
   background-color: #00AF66;
+  color: white; /* Texte blanc sur fond vert */
 }
 
 .color-box {
@@ -291,25 +269,28 @@ section:not(#contexte):not(#persona) p {
   height: 60px;
   margin: 10px auto;
   background-color: #FFD700;
+  border-radius: 0; /* Pas d'arrondi */
 }
 
 .color-box.light {
-  background-color: rgba(0, 175, 102, 0.50);
+  background-color: rgba(0, 175, 102, 0.50); /* Vert clair */
 }
 
 .color-box.green-box {
-  background-color: #00AF66;
+  background-color: #00AF66; /* Vert foncé */
 }
 
 .feature h3 {
   font-size: 2em;
   margin-bottom: 10px;
   line-height: 1.2;
+  font-family: "IBM Plex Serif", serif;
 }
 
 .feature p {
   font-size: 1em;
   line-height: 1.5;
+  font-family: "IBM Plex Serif", serif;
 }
 
 /* Section L'équipe projet */
@@ -318,29 +299,40 @@ display: flex;
 flex-direction: column;
   text-align: center;
   background-color: #F5F5DC;
+  padding-bottom: 40px; /* Ajout de padding pour l'espace en bas */
 }
 
 .team h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.team-grid-container { /* Nouveau conteneur pour gérer l'overflow du carrousel */
+    width: 100%;
+    overflow: hidden; /* Cache les cartes qui débordent */
 }
 
 .team-grid-square {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
- transition: transform 0.5s ease-in-out;
+  justify-content: flex-start; /* Aligne au début pour le défilement */
+  flex-wrap: nowrap; /* Empêche le retour à la ligne */
+  transition: transform 0.5s ease-in-out; /* Pour le défilement du carrousel */
 }
 
 .member-card {
-  width: 25%;
-  height: 250px;
+  width: 25%; /* 4 cartes par ligne */
+  flex-shrink: 0; /* Empêche le rétrécissement */
+  height: 250px; /* Garder la hauteur fixe si besoin, ou auto */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px;
   box-sizing: border-box;
+  border-radius: 0; /* Pas d'arrondi */
+  margin: 0; /* Pas de marge entre les cartes */
+  text-align: center; /* Centrer le texte */
 }
 
 .member-card img {
@@ -349,19 +341,21 @@ flex-direction: column;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 3px solid #F5F5DC;
+  border: 3px solid #F5F5DC; /* Bordure cohérente avec le fond */
 }
 
 .member-card p {
   font-weight: bold;
   margin: 0;
   font-size: 1.2em;
+  font-family: "IBM Plex Serif", serif;
 }
 
 .member-card .title {
   font-weight: normal;
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.8);
+  font-family: "IBM Plex Serif", serif;
 }
 
 .member-card.card-yellow {
@@ -376,7 +370,7 @@ flex-direction: column;
 
 .member-card.light-green {
   background-color: rgba(0, 175, 102, 0.50);
-    color: black;
+  color: black;
 }
 
 .member-card.beige-bg { 
@@ -384,9 +378,9 @@ flex-direction: column;
   color: black; 
 }
 
-.member-card.card-orange {
-  background-color: #F5F5DC;
-  color: white;
+.member-card.card-orange { /* Supprimer si non utilisé, ou lui donner un style distinct */
+  background-color: #F5F5DC; /* Garde la couleur beige si c'est pour un 4ème élément blanc */
+  color: black;
 }
 
 
@@ -460,28 +454,3 @@ footer {
   color: #555;
   font-family: "IBM Plex Serif", serif;
 }
-
-
-
-
-
-
-
-.header h1 {
-  font-size: 16px;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.images {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.images img {
-  width: 30%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-  

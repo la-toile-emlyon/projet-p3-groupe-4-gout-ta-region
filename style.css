@@ -1,57 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-/* Styles généraux */
+
+/* Styles généraux pour toutes les pages ou styles de base */
 html {
   height: 100%;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   font-family: "IBM Plex Serif", serif;
 }
 
-body{
-    background-color: #F5F5DC;
-    margin: 0;
-}
-
-/* Navigation */
-nav{
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    height: 10vh;
-}
-
-#documentation{
-    background-color: #00AF66;
-    color: white;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    align-items: center;
-  justify-content: center;
-    margin: 0;
-}
-#logo {
-  display: flex;
-  justify-content: center;
+body {
+  background-color: #F5F5DC;
   margin: 0;
 }
 
-nav ul{
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  height: 10vh;
+}
+
+#kekro {
+  width: 10vw;
+  max-width: 100px;
+}
+
+nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin: 0;
-}
-/* En-tête */
-header{
- display: flex;
- height: 90vh;
- margin: 0;
- overflow: hidden;
+  padding: 0;
 }
 
-header #header{
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 1vw;
+  font-family: "IBM Plex Serif", serif;
+}
+
+#documentation {
+  background-color: #00AF66;
+  color: white;
+  border-radius: 10px;
+  padding: 1vw 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  height: 90vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+header #header {
   width: 50%;
   height: 100%;
   margin: 0;
@@ -61,57 +71,38 @@ header #header{
   padding: 0 5vw;
 }
 
-header #background-green{
+header #background-green {
   width: 50%;
   height: 100%;
   margin: 0;
   background-color:  #00AF66;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centré verticalement */
 }
 
 header h1 {
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 2.5em; /* Taille ajustée */
   text-align: left;
   margin-bottom: 20px;
-  font-family: "IBM Plex Serif", serif; /
+  font-family: "IBM Plex Serif", serif;
 }
+
 #accroche {
-  font-size: 1.5em;
+  font-size: 1.5em; /* Taille ajustée */
   margin: 0;
   line-height: 1.5;
-  font-family: "IBM Plex Serif", serif; /
+  font-family: "IBM Plex Serif", serif;
 }
+
 header img {
   width: 80%;
-  max-width: 400px;
-  height: 80%;
+  max-width: 400px; /* Taille plus fine */
+  height: auto; /* Garder auto pour l'aspect ratio */
   object-fit: contain;
   padding: 3vw;
 }
-
-img{
-  object-fit: cover;
-  margin: 0;
-}
-
-#logo {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-nav ul{
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin: 0;
-}
-
-
 
 /* Sections Vision, Missions, Valeurs */
 #vision, #missions, #valeurs {
@@ -120,12 +111,13 @@ nav ul{
   align-items: center;
   margin: 0;
   height: 33vh;
-  font-size: 4em;
+  font-size: 4em; /* Taille de base pour l'échelle */
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  perspective: 1000px;
+  perspective: 1000px; /* Pour l'effet 3D */
+  position: relative; /* Nécessaire pour les enfants positionnés absolument */
 }
+
 #vision.light-green {
   background-color: rgba(0, 175, 102, 0.50);
 }
@@ -136,18 +128,10 @@ nav ul{
   background-color: #FFD100;
 }
 
-.title{
-  width: 95vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-    padding: 0 2.5vw;
-}
 .title, .description {
-  position: absolute;
-  width: 95%; /* Ajusté pour l'intérieur du conteneur */
-  height: 100%; /* S'assurer qu'il prend toute la hauteur pour le flip */
+  position: absolute; /* Positionnement absolu pour le flip */
+  width: 100%; /* S'assurer qu'il prend toute la largeur du parent */
+  height: 100%; /* S'assurer qu'il prend toute la hauteur */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -157,164 +141,154 @@ nav ul{
   padding: 0 2.5vw;
   box-sizing: border-box; /* Inclure le padding dans la largeur */
 }
+
 .title {
   transform: rotateY(0deg);
   opacity: 1;
 }
 
-
-.title h2:nth-child(1){
-  margin: 0;
-  font-size: 3em;
-}
-
-
-/** Animation title description */
-.title {
-  transform: rotateY(0deg);
-  opacity: 1;
-}
 .description {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Commence "retourné" */
   opacity: 0;
-  display: none;
-  font-size: 0.6em;
-  text-align: center;
+  color: white; /* Texte en blanc pour les descriptions */
+  font-size: 0.8em; /* Message plus gros et lisible */
+  flex-direction: column; /* Texte de description en colonne pour meilleure lisibilité */
   justify-content: center;
-  padding: 0 5vw;
-  color: #000;
-  font-family: "IBM Plex Serif", serif; /
-}
-#valeurs .description {
-    flex-direction: row; 
-    gap: 20px;
-    font-size: 0.4em;
-}
-#vision:hover .description, #missions:hover .description, #valeurs:hover .description   {
-  display: flex;
   align-items: center;
-  flex-direction: row;
-  width: 100vw;
-  justify-content: space-around;
+  line-height: 1.4;
 }
 
-#vision:hover .title, #missions:hover .title, #valeurs:hover .title {
-  display: none;
+#valeurs .description {
+    flex-direction: row; /* Pour "Vrai Local Respect" côte à côte */
+    gap: 20px;
+    font-size: 0.7em; /* Taille légèrement plus grande pour ces 3 mots */
+}
+
+.title h2:nth-child(1) {
+  margin: 0;
+  font-size: 1em; /* Relatif à la taille du parent */
 }
 
 .number {
   margin: 0;
-  font-size: 0.5em; 
+  font-size: 0.5em; /* Relatif à la taille du parent, grand comme sur la maquette */
 }
 
-main{
+main {
   margin: 0;
 }
-/* Section Statistiques */
 
-#stats{
+/* Section Statistiques */
+#stats {
   width: 100vw;
   display: flex;
   flex-direction: row;
 }
 
-#stats div{
-  width: calc(100vw/3);
+#stats div {
+  width: calc(100vw / 3);
   height: 25vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 4em;
-    text-align: center;
+  font-size: 4em; /* Taille de base pour le % */
+  color: black; /* Couleur noire demandée */
+  text-align: center;
   padding: 10px;
   box-sizing: border-box;
 }
 
 #stats div span.percentage {
-    font-size: 1em; 
+    font-size: 1em; /* Reste 1em par rapport au 4em du parent */
     font-weight: bold;
-
+    font-family: "IBM Plex Serif", serif;
 }
 
 #stats div span.message {
-    font-size: 0.25em; 
+    font-size: 0.25em; /* Message plus petit */
     line-height: 1.2;
     margin-top: 5px;
-
+    font-family: "IBM Plex Serif", serif;
 }
 
-.green{
+.green {
   background-color: #00AF66;
 }
 
-.light-green{
+.light-green {
   background-color: rgba(0, 175, 102, 0.50);
 }
-.yellow{
+.yellow {
   background-color: #FFD100;
 }
-.beige{
+.beige {
   background-color: #F5F5DC;
 }
+
 /* Section Fonctionnalités */
-#fonctionnalites{
+#fonctionnalites {
   display: flex;
   flex-direction: column;
 }
 
-.fonctionalite{
+.fonctionalite {
   display: flex;
   flex-direction: row;
   width: 100vw;
   height: 40vw;
 }
 
-.fonctionalite img{
-  width: 56vw;
-  max-width: 50vw;
+.fonctionalite.reversed-order {
+  flex-direction: row-reverse;
+}
+
+.fonctionalite img {
+  width: 50vw;
+  max-width: 350px; /* Taille maximale pour rester "fin" */
   height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* Garder contain pour ne pas couper l'image du téléphone */
   display: flex;
   align-items: center;
   justify-content: center;
-   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
 }
 
-.fonctionalite h3{
+.fonctionalite h3 {
   width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
   font-weight: 400;
-    text-align: center;
+  text-align: center;
   padding: 0 2vw;
-   font-family: "IBM Plex Serif", serif;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  font-family: "IBM Plex Serif", serif;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Pour les animations JS */
 }
+
 /* Section Témoignages */
-#temoignages{
+#temoignages {
   width: 100vw;
   display: flex;
   flex-direction: row;
   padding: 2vw 0;
 }
 
-.temoignage-card{
-  width: calc(100vw/3);
-  height: 20vw;
+.temoignage-card {
+  width: calc(100vw / 3);
+  height: 20vw; /* Cases plus petites */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1vw;
-  box-sizing: border-box; 
+  padding: 1vw; /* Padding ajusté */
+  box-sizing: border-box; /* Inclure padding dans la largeur */
 }
 
 .temoignage-card img {
-    width: 10vw;
+    width: 10vw; /* Plus petite image */
     height: 10vw;
     max-width: 100px;
     max-height: 100px;
@@ -323,68 +297,18 @@ main{
     margin-bottom: 10px;
 }
 
-.temoignage-card h4{
-  font-size: 1.5em; 
+.temoignage-card h4 {
+  font-size: 1.5em; /* Taille ajustée */
   margin-bottom: 5px;
   font-family: "IBM Plex Serif", serif;
 }
-.temoignage-card p{
-  font-size: 0.9em; 
+.temoignage-card p {
+  font-size: 0.9em; /* Taille ajustée */
   line-height: 1.4;
   font-family: "IBM Plex Serif", serif;
 }
 
-a{
-  text-decoration: none;
-}
-
-
-nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2vw
-}
-
-#kekro{
-  width: 10vw;
-}
-
-#documentation{
-  background-color: #00AF66;
-  color: white;
-  padding: 1vw;
-}
-
-nav a{
-  color: black;
-  padding: 1vw;
-}
-
-header h1{
-  text-transform: uppercase;
-  font-size: 2em;
-  text-align: center;
-}
-
-header img{
-  width: 55%;
-  padding: 3vw;
-}
-
-
-#accroche{
-  font-size: 1.8em;
-  margin: 0;
-  padding: 1vw;
-}
-
-#vision{
-  margin: 0;
-}
-
 /* Pied de page */
-
 footer {
   background-color: #e8faeb;
   text-align: center;
@@ -403,6 +327,7 @@ footer {
   display: block;
   margin-bottom: 10px;
   color: #000;
+  font-family: "IBM Plex Serif", serif;
 }
 
 .newsletter-input {
@@ -425,7 +350,7 @@ footer {
   font-family: "IBM Plex Serif", serif;
 }
 
-.footer-links{
+.footer-links {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -434,7 +359,7 @@ footer {
 .footer-links a {
   text-decoration: none;
   color: #000;
-
+  font-family: "IBM Plex Serif", serif;
 }
 
 .social-icons {
@@ -453,4 +378,3 @@ footer {
   color: #555;
   font-family: "IBM Plex Serif", serif;
 }
-
